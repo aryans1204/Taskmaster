@@ -43,7 +43,7 @@ const userSchema = new mongoose.Schema({
 userSchema.virtual('tasks', {
     ref: 'Task',
     localField: '_id',
-    globalField: 'owner'
+    foreignField: 'owner'
 })
 
 userSchema.methods.toJSON() = async function () {
