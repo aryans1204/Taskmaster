@@ -46,7 +46,7 @@ userSchema.virtual('tasks', {
     foreignField: 'owner'
 })
 
-userSchema.methods.toJSON() = async function () {
+userSchema.methods.toJSON = async function () {
     const user = this
     const userObject = user.toObject()
 
@@ -55,7 +55,7 @@ userSchema.methods.toJSON() = async function () {
 
     return userObject
 }
-userSchema.methods.generateAuthToken() = async function () {
+userSchema.methods.generateAuthToken = async function () {
     const user = this
     const token = jwt.sign({_id: user._id.toString()}, process.env.JWT_SECRET)
     user.tokens = user.tokens.concat({ token })
