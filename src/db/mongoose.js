@@ -2,7 +2,7 @@ const mongoose = require('mongoose')
 
 
 mongoose.connect(process.env.MONGODB_URL, {
-    useNewUrlParser:truei
+    useNewUrlParser:true
 })
 
 
